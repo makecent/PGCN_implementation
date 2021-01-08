@@ -1,6 +1,6 @@
 import argparse
 parser = argparse.ArgumentParser(description="PyTorch code to train PGCN")
-parser.add_argument('dataset', type=str, choices=['activitynet1.3', 'thumos14'])
+parser.add_argument('dataset', type=str, choices=['activitynet1.3', 'thumos14', 'dfmad'])
 
 # ========================= Model Configs ==========================
 parser.add_argument('--dropout', '--do', default=0.8, type=float,

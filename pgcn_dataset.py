@@ -23,7 +23,7 @@ class PGCNInstance:
                  best_iou=None, overlap_self=None):
         self.start_frame = start_frame
         self.end_frame = min(end_frame, video_frame_count)
-        self._label = label
+        self._label = label + 1
         self.fps = fps
 
         self.coverage = (end_frame - start_frame) / video_frame_count

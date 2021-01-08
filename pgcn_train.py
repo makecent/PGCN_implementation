@@ -217,19 +217,19 @@ def train(train_loader, model, act_criterion, comp_criterion, regression_criteri
         writer.add_scalar('data/comp_loss', comp_losses.val, epoch*len(train_loader)+i+1)
 
         if i % args.print_freq == 0:
-            logger.info('Epoch: [{0}][{1}/{2}], lr: {lr:.5f}\t'
-                  'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
-                  'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Act. Loss {act_losses.val:.3f} ({act_losses.avg: .3f}) \t'
-                  'Comp. Loss {comp_losses.val:.3f} ({comp_losses.avg: .3f}) '
+            logger.info('Epoch: [{0}][{1:02d}/{2}], lr: {lr:.3f} '
+                  'Time {batch_time.val:.2f}({batch_time.avg:.2f}) '
+                  'Data {data_time.val:.2f}({data_time.avg:.2f}) '
+                  'Loss {loss.val:.3f}({loss.avg:.3f}) '
+                  'Act. {act_losses.val:.2f}({act_losses.avg:.2f}) '
+                  'Comp. {comp_losses.val:.2f}({comp_losses.avg:.2f}) '
                   .format(
                    epoch, i, len(train_loader), batch_time=batch_time,
                    data_time=data_time, loss=losses, act_losses=act_losses,
                     comp_losses=comp_losses, lr=optimizer.param_groups[0]['lr'], ) +
-                  '\tReg. Loss {reg_loss.val:.3f} ({reg_loss.avg:.3f})'.format(
+                  'Reg. {reg_loss.val:.2f}({reg_loss.avg:.2f}) '.format(
                       reg_loss=reg_losses)
-                  + '\n Act. FG {fg_acc.val:.02f} ({fg_acc.avg:.02f}) Act. BG {bg_acc.avg:.02f} ({bg_acc.avg:.02f})'
+                  + 'Act. FG {fg_acc.val:.02f}({fg_acc.avg:.02f}) Act. BG {bg_acc.avg:.02f}({bg_acc.avg:.02f})'
                   .format(act_acc=act_accuracies,
                     fg_acc=fg_accuracies, bg_acc=bg_accuracies)
                   )
@@ -291,25 +291,25 @@ def validate(val_loader, model, act_criterion, comp_criterion, regression_criter
         end = time.time()
 
         if i % args.print_freq == 0:
-            logger.info('Test: [{0}/{1}]\t'
-                  'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Act. Loss {act_loss.val:.3f} ({act_loss.avg:.3f})\t'
-                  'Comp. Loss {comp_loss.val:.3f} ({comp_loss.avg:.3f})\t'
-                  'Act. Accuracy {act_acc.val:.02f} ({act_acc.avg:.2f}) FG {fg_acc.val:.02f} BG {bg_acc.val:.02f}'.format(
+            logger.info('\nTest: [{0}/{1}] '
+                  'Time {batch_time.val:.2f}({batch_time.avg:.2f}) '
+                  'Loss {loss.val:.3f}({loss.avg:.3f}) '
+                  'Act. {act_loss.val:.2f}({act_loss.avg:.2f}) '
+                  'Comp.{comp_loss.val:.2f}({comp_loss.avg:.2f}) '
+                  'Act. Accuracy {act_acc.val:.02f}({act_acc.avg:.2f}) FG {fg_acc.val:.02f} BG {bg_acc.val:.02f}'.format(
                    i, len(val_loader), batch_time=batch_time, loss=losses,
                     act_loss=act_losses, comp_loss=comp_losses, act_acc=act_accuracies,
                     fg_acc=fg_accuracies, bg_acc=bg_accuracies) +
-                  '\tReg. Loss {reg_loss.val:.3f} ({reg_loss.avg:.3f})'.format(
+                  ' Reg. {reg_loss.val:.2f}({reg_loss.avg:.2f}\n)'.format(
                       reg_loss=reg_losses))
 
-    logger.info('Testing Results: Loss {loss.avg:.5f} \t '
-          'Activity Loss {act_loss.avg:.3f} \t '
-          'Completeness Loss {comp_loss.avg:.3f}\n'
+    logger.info('\nTesting Results: Loss {loss.avg:.3f} '
+          'Activity Loss {act_loss.avg:.2f} '
+          'Completeness Loss {comp_loss.avg:.2f} '
           'Act Accuracy {act_acc.avg:.02f} FG Acc. {fg_acc.avg:.02f} BG Acc. {bg_acc.avg:.02f}'
           .format(act_loss=act_losses, comp_loss=comp_losses, loss=losses, act_acc=act_accuracies,
                   fg_acc=fg_accuracies, bg_acc=bg_accuracies)
-          + '\t Regression Loss {reg_loss.avg:.3f}'.format(reg_loss=reg_losses))
+          + ' Regression Loss {reg_loss.avg:.2f}'.format(reg_loss=reg_losses))
 
     return losses.avg
 

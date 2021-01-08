@@ -20,7 +20,7 @@ from ops.utils import get_configs
 # options
 parser = argparse.ArgumentParser(
     description="Evaluate detection performance metrics")
-parser.add_argument('dataset', type=str, choices=['activitynet1.2', 'thumos14'])
+parser.add_argument('dataset', type=str, choices=['activitynet1.2', 'thumos14', 'dfmad'])
 parser.add_argument('detection_pickles', type=str, nargs='+')
 parser.add_argument('--nms_threshold', type=float, default=None)
 parser.add_argument('--no_regression', default=False, action="store_true")
@@ -187,6 +187,8 @@ print("Calling mean AP calculator from toolkit with {} workers...".format(args.a
 if args.dataset == 'activitynet1.2':
     iou_range = np.arange(0.5, 1.0, 0.05)
 elif args.dataset == 'thumos14':
+    iou_range = np.arange(0.1, 1.0, 0.1)
+elif args.dataset == 'dfmad':
     iou_range = np.arange(0.1, 1.0, 0.1)
 else:
     raise ValueError("unknown dataset {}".format(args.dataset))

@@ -52,8 +52,8 @@ def feature_pooling(start_ind, end_ind, vid, n_frame, n_seg, type, ft_tensor):
 
         fts = []
 
-        start_unit = int(min(ft_num-1, np.floor(float(start_ind+off)/interval)))
-        end_unit = int(min(ft_num-2, np.ceil(float(end_ind-clip_length)/interval)))
+        start_unit = int(min(ft_num-1, np.floor(ft_num/n_frame * start_ind)))
+        end_unit = int(min(ft_num-2, np.ceil(ft_num/n_frame * end_ind)))
 
         if start_unit < end_unit:
             fts.append(torch.max(ft_tensor[start_unit: end_unit+1, :], 0)[0])

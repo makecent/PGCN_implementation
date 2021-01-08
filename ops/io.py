@@ -16,7 +16,7 @@ def load_proposal_file(filename):
         vid = info[offset]
         offset += 1
 
-        n_frame = int(float(info[1]) * float(info[2]))
+        n_frame = int(float(info[1]))
         n_gt = int(info[3])
         offset = 4
 

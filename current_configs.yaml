@@ -1,12 +1,13 @@
 dataset_configs:
-    train_dict_path: /home/alvin/Projects/ICCV_camera_ready/data/thumos14_train_prop_dict.pkl
-    val_dict_path: /home/alvin/Projects/ICCV_camera_ready/data/thumos14_val_prop_dict.pkl
-    test_dict_path: /home/alvin/Projects/ICCV_camera_ready/data/thumos14_test_prop_dict.pkl
-    train_ft_path: /home/datasets/THUMOS14/I3D_video_level/Flow_Val_All
-    test_ft_path: /home/datasets/THUMOS14/I3D_video_level/Flow_Test_All
 
-    train_prop_file: /home/alvin/Projects/ICCV_camera_ready/data/bsn_train_proposal_list.txt
-    test_prop_file: /home/alvin/Projects/ICCV_camera_ready/data/bsn_test_proposal_list.txt
+    train_ft_path: data/DFMAD-70/features/i3d_rgb_feat
+    test_ft_path: data/DFMAD-70/features/i3d_rgb_feat
+
+    train_dict_path: data/dfmad_train_prop_dict.pkl
+    val_dict_path: data/dfmad_val_prop_dict.pkl
+    test_dict_path: data/dfmad_test_prop_dict.pkl
+    train_prop_file: data/DFMAD-70/proposals/dfmad_bmn_train_100_proposal_list.txt
+    test_prop_file: data/DFMAD-70/proposals/dfmad_bmn_test_100_proposal_list.txt
 
     training_epoch_multiplier: 20
     testing_epoch_multiplier: 1
@@ -15,7 +16,7 @@ dataset_configs:
     bg_iou_thresh: 0.01
     incomplete_iou_thresh: 0.3
     bg_coverage_thresh: 0.02
-    incomplete_overlap_thresh: 0.01
+    incomplete_overlap_thresh: 0
     prop_per_video: 8
     fg_ratio: 1
     bg_ratio: 1
@@ -33,15 +34,14 @@ graph_configs:
     dis_num: 2
 
 model_configs:
-    num_class: 20
-    act_feat_dim: 1024
-    comp_feat_dim: 3072
+    num_class: 3
+    act_feat_dim: 2048
+    comp_feat_dim: 6144
     dropout: 0.8
     gcn_dropout: 0.7
 
 
 evaluation:
-    top_k: 2000
+    top_k: 30
     nms_threshold: 0.2
-
 
