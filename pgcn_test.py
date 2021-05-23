@@ -13,7 +13,7 @@ import random
 
 parser = argparse.ArgumentParser(
     description="PGCN Testing Tool")
-parser.add_argument('dataset', type=str, choices=['activitynet1.2', 'thumos14', 'dfmad'])
+parser.add_argument('dataset', type=str, choices=['activitynet1.2', 'thumos14', 'dfmad_bmn', 'dfmad_gtad'])
 parser.add_argument('weights', type=str)
 parser.add_argument('save_scores', type=str)
 

@@ -1,0 +1,7 @@
+The three files dfmad_test_prop_dict.pkl ... are produced by PGCN after training. And they will be stored for next training. So if you just debug a problem, remember to delete the generated dick.pkl files because they may still old one that making bugs.
+
+In the dataset_cfg.yaml, there is dfmad configs (scroll down to see)
+
+Every run will save the whole runtime code and files thus will consume larger size of memory, remember to delete fail runs in work_dirs.
+
+I meet the cuda assert error, which is found to be caused by error label in the proposal.txt files.

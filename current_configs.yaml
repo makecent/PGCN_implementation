@@ -1,13 +1,13 @@
 dataset_configs:
 
-    train_ft_path: data/DFMAD-70/features/i3d_rgb_feat
-    test_ft_path: data/DFMAD-70/features/i3d_rgb_feat
+    train_ft_path: data/dfmad70/features/i3d_rgb_feat
+    test_ft_path: data/dfmad70/features/i3d_rgb_feat
 
-    train_dict_path: data/dfmad_train_prop_dict.pkl
-    val_dict_path: data/dfmad_val_prop_dict.pkl
-    test_dict_path: data/dfmad_test_prop_dict.pkl
-    train_prop_file: data/DFMAD-70/proposals/dfmad_bmn_train_100_proposal_list.txt
-    test_prop_file: data/DFMAD-70/proposals/dfmad_bmn_test_100_proposal_list.txt
+    train_dict_path: data/dfmad_train_gtad_prop_dict.pkl
+    val_dict_path: data/dfmad_val_gtad_prop_dict.pkl
+    test_dict_path: data/dfmad_test_gtad_prop_dict.pkl
+    train_prop_file: data/dfmad70/proposals/dfmad_gtad_train_200_proposal.txt
+    test_prop_file: data/dfmad70/proposals/dfmad_gtad_test_200_proposal.txt
 
     training_epoch_multiplier: 20
     testing_epoch_multiplier: 1

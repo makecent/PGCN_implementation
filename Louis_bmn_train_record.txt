@@ -1,4 +1,4 @@
-python pgcn_train.py dfmad --snapshot_pre work_dirs/dfmad/
+python pgcn_train.py dfmad_bmn --snapshot_pre work_dirs/dfmad/
 
 2021-01-07 18:56:40,346 INFO 
 creating folder: work_dirs/dfmad/
