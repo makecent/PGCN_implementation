@@ -106,8 +106,8 @@ dfmad_bmn:
     train_dict_path: data/dfmad_train_bmn_prop_dict.pkl
     val_dict_path: data/dfmad_val_bmn_prop_dict.pkl
     test_dict_path: data/dfmad_test_bmn_prop_dict.pkl
-    train_prop_file: data/DFMAD-70/proposals/dfmad_bmn_train_100_proposal_list.txt
-    test_prop_file: data/DFMAD-70/proposals/dfmad_bmn_test_100_proposal_list.txt
+    train_prop_file: data/DFMAD-70/proposals/dfmad_bmn_train_400_proposal_list.txt
+    test_prop_file: data/DFMAD-70/proposals/dfmad_bmn_test_400_proposal_list.txt
 
     training_epoch_multiplier: 20
     testing_epoch_multiplier: 1
