@@ -100,14 +100,14 @@ activitynet1.3:
 dfmad_bmn:
   dataset_configs:
 
-    train_ft_path: 'data/dfmad70/features/i3d_rgb_feat'
-    test_ft_path: 'data/dfmad70/features/i3d_rgb_feat'
+    train_ft_path: 'data/dfmad70/features/i3d_flow_feat' # i3d_flow_feat or i3d_rgb_feat
+    test_ft_path: 'data/dfmad70/features/i3d_flow_feat'  # i3d_flow_feat or i3d_rgb_feat
 
     train_dict_path: data/dfmad_train_bmn_prop_dict.pkl
     val_dict_path: data/dfmad_val_bmn_prop_dict.pkl
     test_dict_path: data/dfmad_test_bmn_prop_dict.pkl
-    train_prop_file: data/DFMAD-70/proposals/dfmad_bmn_train_400_proposal_list.txt
-    test_prop_file: data/DFMAD-70/proposals/dfmad_bmn_test_400_proposal_list.txt
+    train_prop_file: data/dfmad70/proposals/dfmad_bmn_train_200_proposal_list.txt
+    test_prop_file: data/dfmad70/proposals/dfmad_bmn_test_200_proposal_list.txt
 
     training_epoch_multiplier: 20
     testing_epoch_multiplier: 1
@@ -135,8 +135,8 @@ dfmad_bmn:
 
   model_configs:
     num_class: 3
-    act_feat_dim: 2048
-    comp_feat_dim: 6144
+    act_feat_dim: 1024
+    comp_feat_dim: 3072
     dropout: 0.8
     gcn_dropout: 0.7
 
@@ -150,8 +150,8 @@ dfmad_bmn:
 dfmad_gtad:
   dataset_configs:
 
-    train_ft_path: 'data/dfmad70/features/i3d_rgb_feat'
-    test_ft_path: 'data/dfmad70/features/i3d_rgb_feat'
+    train_ft_path: 'data/dfmad70/features/i3d_rgb_feat' # i3d_flow_feat or i3d_rgb_feat
+    test_ft_path: 'data/dfmad70/features/i3d_rgb_feat'  # i3d_flow_feat or i3d_rgb_feat
 
     train_dict_path: data/dfmad_train_gtad_prop_dict.pkl
     val_dict_path: data/dfmad_val_gtad_prop_dict.pkl
@@ -185,8 +185,8 @@ dfmad_gtad:
 
   model_configs:
     num_class: 3
-    act_feat_dim: 2048
-    comp_feat_dim: 6144
+    act_feat_dim: 1024
+    comp_feat_dim: 3072  # seems should be (act_feat_dim x 3)
     dropout: 0.8
     gcn_dropout: 0.7
 

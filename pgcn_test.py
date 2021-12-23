@@ -44,7 +44,7 @@ graph_configs = configs["graph_configs"]
 adj_num = graph_configs['adj_num']
 num_class = model_configs['num_class']
 
-gpu_list = args.gpus if args.gpus is not None else range(8)
+gpu_list = args.gpus if args.gpus is not None else range(1)
 
 
 

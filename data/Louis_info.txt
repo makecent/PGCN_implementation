@@ -1,7 +1,9 @@
-The three files dfmad_test_prop_dict.pkl ... are produced by PGCN after training. And they will be stored for next training. So if you just debug a problem, remember to delete the generated dick.pkl files because they may still old one that making bugs.
+The files like 'dfmad_test_prop_dict.pkl' are produced by PGCN during the training. And they will be used for the future training. So if you just debugged a problem, remember to delete the previously generated "...dict.pkl" files because they won't be updated and still cause bugs.
 
 In the dataset_cfg.yaml, there is dfmad configs (scroll down to see)
 
 Every run will save the whole runtime code and files thus will consume larger size of memory, remember to delete fail runs in work_dirs.
 
-I meet the cuda assert error, which is found to be caused by error label in the proposal.txt files.
+I meet the cuda assert error, which is found to be caused by error label in the proposal.txt files. (update)I meet this probelm again, this time is caused by the wrong dimension in the dataset_cfg.yaml file because the features used was changed from of 2048 to 1024 dims.
+
+Unlike the orginal paper says dividing each video to segments of 64-frames, the thumos14 features provided by the author is extract using 8-frame segments.
