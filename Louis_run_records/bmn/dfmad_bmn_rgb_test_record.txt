@@ -1,0 +1,29 @@
+sh test.sh work_dirs/dfmad_bmn/PGCN_dfmad_bmn_model_best.pth.tar
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:00<00:00, 129.14it/s]
+model epoch 60 loss: 0.6242694854736328
+File parsed. Time:0.02
+Dict constructed. Time:0.10
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:18<00:00,  1.41s/it]
+[W CudaIPCTypes.cpp:21] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+Segmentation fault (core dumped)
+initiating evaluation of detection results ['result']
+Merge detection scores from 1 sources...
+Done.
+File parsed. Time:0.04
+Dict constructed. Time:0.01
+Preprocessing detections...
+Done.
+Performing nms...
+NMS Done.
+Performing location regression...
+Regression Done.
+Calling mean AP calculator from toolkit with 32 workers...
+Evaluation done.
+
+
++Detection Performance on dfmad_bmn-----+--------+--------+--------+--------+--------+--------+---------+
+| IoU thresh | 0.10   | 0.20   | 0.30   | 0.40   | 0.50   | 0.60   | 0.70   | 0.80   | 0.90   | Average |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+| mean AP    | 0.6517 | 0.6517 | 0.6517 | 0.6510 | 0.6510 | 0.6510 | 0.6354 | 0.4417 | 0.1390 | 0.5693  |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+

@@ -1,0 +1,22 @@
+sh test_two_stream.sh
+initiating evaluation of detection results ['results/dfmad_bmn_flow_result', 'results/dfmad_bmn_rgb_result']
+Merge detection scores from 2 sources...
+Done.
+File parsed. Time:0.02
+Dict constructed. Time:0.01
+Preprocessing detections...
+Done.
+Performing nms...
+NMS Done.
+Performing location regression...
+Regression Done.
+Calling mean AP calculator from toolkit with 32 workers...
+Evaluation done.
+
+
++Detection Performance on dfmad_bmn-----+--------+--------+--------+--------+--------+--------+---------+
+| IoU thresh | 0.10   | 0.20   | 0.30   | 0.40   | 0.50   | 0.60   | 0.70   | 0.80   | 0.90   | Average |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+| mean AP    | 0.7168 | 0.7168 | 0.7168 | 0.7168 | 0.6909 | 0.6909 | 0.6776 | 0.5490 | 0.1765 | 0.6280  |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+

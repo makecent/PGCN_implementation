@@ -1,0 +1,94 @@
+sh test.sh work_dirs/dfmad_gtad/PGCN_dfmad_gtad_model_best.pth.tar
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:00<00:00, 141.21it/s]
+model epoch 30 loss: 0.3850485682487488
+File parsed. Time:0.01
+Dict constructed. Time:0.10
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/louis/PycharmProjects/PGCN/pgcn_test.py", line 116, in runner_func
+    torch.cuda.set_device(gpu_id)
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/site-packages/torch/cuda/__init__.py", line 261, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/louis/PycharmProjects/PGCN/pgcn_test.py", line 116, in runner_func
+    torch.cuda.set_device(gpu_id)
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/site-packages/torch/cuda/__init__.py", line 261, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+  0%|                                                                                                                                                                               | 0/13 [00:00<?, ?it/s]Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/louis/PycharmProjects/PGCN/pgcn_test.py", line 116, in runner_func
+    torch.cuda.set_device(gpu_id)
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/site-packages/torch/cuda/__init__.py", line 261, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+ 23%|██████████████████████████████████████▌                                                                                                                                | 3/13 [00:01<00:03,  2.58it/s]Process SpawnProcess-5:
+Traceback (most recent call last):
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/louis/PycharmProjects/PGCN/pgcn_test.py", line 116, in runner_func
+    torch.cuda.set_device(gpu_id)
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/site-packages/torch/cuda/__init__.py", line 261, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+ 31%|███████████████████████████████████████████████████▍                                                                                                                   | 4/13 [00:01<00:03,  2.27it/s]Process SpawnProcess-6:
+Traceback (most recent call last):
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/louis/PycharmProjects/PGCN/pgcn_test.py", line 116, in runner_func
+    torch.cuda.set_device(gpu_id)
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/site-packages/torch/cuda/__init__.py", line 261, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+ 46%|█████████████████████████████████████████████████████████████████████████████                                                                                          | 6/13 [00:02<00:03,  2.32it/s]Process SpawnProcess-7:
+Traceback (most recent call last):
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/louis/PycharmProjects/PGCN/pgcn_test.py", line 116, in runner_func
+    torch.cuda.set_device(gpu_id)
+  File "/home/louis/miniconda3/envs/pgcn/lib/python3.9/site-packages/torch/cuda/__init__.py", line 261, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:05<00:00,  2.37it/s]
+[W CudaIPCTypes.cpp:21] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+initiating evaluation of detection results ['result']
+Merge detection scores from 1 sources...
+Done.
+File parsed. Time:0.01
+Dict constructed. Time:0.01
+Preprocessing detections...
+Done.
+Performing nms...
+NMS Done.
+Performing location regression...
+Regression Done.
+Calling mean AP calculator from toolkit with 32 workers...
+Evaluation done.
+
+
++Detection Performance on dfmad_gtad----+--------+--------+--------+--------+--------+--------+---------+
+| IoU thresh | 0.10   | 0.20   | 0.30   | 0.40   | 0.50   | 0.60   | 0.70   | 0.80   | 0.90   | Average |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+| mean AP    | 0.8730 | 0.8717 | 0.8613 | 0.8309 | 0.7899 | 0.7489 | 0.5680 | 0.3443 | 0.0953 | 0.6648  |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+

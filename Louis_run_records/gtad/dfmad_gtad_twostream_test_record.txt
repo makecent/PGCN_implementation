@@ -1,0 +1,22 @@
+sh test_two_stream.sh
+initiating evaluation of detection results ['results/dfmad_gtad_flow_result', 'results/dfmad_gtad_rgb_result']
+Merge detection scores from 2 sources...
+Done.
+File parsed. Time:0.01
+Dict constructed. Time:0.00
+Preprocessing detections...
+Done.
+Performing nms...
+NMS Done.
+Performing location regression...
+Regression Done.
+Calling mean AP calculator from toolkit with 32 workers...
+Evaluation done.
+
+
++Detection Performance on dfmad_gtad----+--------+--------+--------+--------+--------+--------+---------+
+| IoU thresh | 0.10   | 0.20   | 0.30   | 0.40   | 0.50   | 0.60   | 0.70   | 0.80   | 0.90   | Average |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+| mean AP    | 0.9090 | 0.9032 | 0.8853 | 0.8440 | 0.7790 | 0.7518 | 0.5808 | 0.3835 | 0.1181 | 0.6838  |
++------------+--------+--------+--------+--------+--------+--------+--------+--------+--------+---------+
+
