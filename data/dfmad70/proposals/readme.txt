@@ -38,4 +38,3 @@ Format explained:
 
 *best_iou: the largest iou with all groud truths that the proposal has.
 *overlap_self: the overlap with gt / proposal length
-*class_index should start with 1 end with num_classes. Because both PGCN and SSN will use (class_index - 1) as the label.
